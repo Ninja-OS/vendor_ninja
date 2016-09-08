@@ -101,14 +101,25 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
-# JDC-specific init file
+# LatinIME gesture typing
+ifeq ($(TARGET_ARCH),arm64)
+PRODUCT_COPY_FILES += \
+    vendor/phenom/prebuilt/common/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so \
+    vendor/phenom/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/phenom/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
+    vendor/phenom/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+endif
+
+# PHENOM-specific init file
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
-    vendor/aosp/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/aosp/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/phenom/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/phenom/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
