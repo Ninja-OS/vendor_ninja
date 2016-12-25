@@ -140,3 +140,6 @@ PRODUCT_PACKAGES += \
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
+
+# Google sounds
+include vendor/ninja/google/GoogleAudio.mk
