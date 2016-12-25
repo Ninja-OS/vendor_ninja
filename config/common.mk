@@ -51,3 +51,6 @@ include vendor/ninja/config/ninja.mk
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/ninja/overlay/common
+
+# Google sounds
+include vendor/ninja/google/GoogleAudio.mk
