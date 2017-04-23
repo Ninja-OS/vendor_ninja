@@ -1,6 +1,10 @@
-# Inherit common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit common stuff
+$(call inherit-product, vendor/ninja/config/common.mk)
 
-$(call inherit-product, vendor/aosp/config/telephony.mk)
+# Selective SPN list for operator number who has the problem.
+PRODUCT_COPY_FILES += \
+    vendor/ninja/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-$(call inherit-product, vendor/aosp/config/jdc_props.mk)
+# SIM Toolkit
+PRODUCT_PACKAGES += \
+    Stk
