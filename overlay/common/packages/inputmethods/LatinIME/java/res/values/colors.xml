@@ -27,4 +27,14 @@
    <color name="gesture_trail_color_lxx_dark">#5E97F6</color>
    <color name="sliding_key_input_preview_color_lxx_dark">#B35E97F6</color>
 
+    <!-- Array of titles for sim color for multi-sim -->
+    <string-array name="color_picker">
+        <item>Pixel</item>
+        <item>Blue</item>
+        <item>Indigo</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Red</item>
+    </string-array>
+
 </resources>
