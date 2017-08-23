@@ -1,0 +1,7 @@
+bootstrap_go_package {
+    name: "soong-ninja",
+    pkgPath: "ninja/soong/android",
+    srcs: [
+        "android/variable.go",
+    ],
+}
