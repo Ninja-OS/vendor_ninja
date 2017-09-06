@@ -26,20 +26,20 @@ endif
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/ninja/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/ninja/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/ninja/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ninja/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
+    vendor/ninja/overlay/common \
+    vendor/ninja/overlay/dictionaries
 
-# Custom JDCTeam packages
+# Custom NINJA packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
     Jelly \
@@ -49,13 +49,11 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     OTAUpdates \
     Stk \
-    Substratum \
-    ThemeInterfacer \
     Turbo
 
 # Default permissions
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/privapp-permissions-jdc.xml:system/etc/permissions/privapp-permissions-jdc.xml
+    vendor/ninja/prebuilt/common/etc/privapp-permissions-ninja.xml:system/etc/permissions/privapp-permissions-ninja.xml
 
 # Extra tools
 PRODUCT_PACKAGES += \
