@@ -52,12 +52,14 @@
     <!-- <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
         <item>restart</item>
-        <item>profile</item>
         <item>recovery</item>
+        <item>screenshot</item>
         <item>airplane</item>
-        <item>bugreport</item>
+        <item>settings</item>
+        <item>lockdown</item>
         <item>users</item>
-    </string-array> -->
+        <item>silent</item>
+    </string-array>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
