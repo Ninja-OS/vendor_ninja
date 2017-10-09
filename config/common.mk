@@ -39,6 +39,10 @@ PRODUCT_COPY_FILES += \
     vendor/ninja/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
+# Fix Google dialer
+PRODUCT_COPY_FILES += \
+    vendor/ninja/prebuilt/common/etc/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml
+
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/ninja/prebuilt/common/etc/mkshrc:system/etc/mkshrc
