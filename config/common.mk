@@ -134,6 +134,11 @@ PRODUCT_PACKAGES += \
     librsjni \
     libprotobuf-cpp-full
 
+# Charging sounds
+PRODUCT_COPY_FILES += \
+    vendor/ninja/google/effects/BatteryPlugged.ogg:system/media/audio/ui/BatteryPlugged.ogg \
+    vendor/ninja/google/effects/BatteryPlugged_48k.ogg:system/media/audio/ui/BatteryPlugged_48k.ogg
+
 # Charger images
 PRODUCT_PACKAGES += \
     charger_res_images
