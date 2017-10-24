@@ -1,5 +1,5 @@
-# Insert new variables inside the Jdc structure
-jdc_soong:
+# Insert new variables inside the Ninja structure
+ninja_soong:
 	$(hide) mkdir -p $(dir $@)
 	$(hide) (\
 	echo '{'; \
