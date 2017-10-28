@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit common Ninja-OS stuff
-$(call inherit-product, vendor/ninja/config/common.mk)
+$(call inherit-product, vendor/ninja/config/common_full_phone.mk)
 
 $(call inherit-product, vendor/ninja/config/telephony.mk)
 
