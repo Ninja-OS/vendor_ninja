@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     Stk \
     Turbo \
-    ViaBrowser \
+    FirefoxFocus \
     Phonograph \
     WallpaperPickerGoogle
 
