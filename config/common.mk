@@ -147,5 +147,10 @@ PRODUCT_PACKAGES += \
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
+# Magisk
+ifeq ($(WITH_ROOT),true)
+ PRODUCT_COPY_FILES += \
+    vendor/ninja/prebuilt/common/magisk/Magisk.zip:system/addon.d/magisk.zip
+
 # Google sounds
 include vendor/ninja/google/GoogleAudio.mk
