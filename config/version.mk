@@ -18,7 +18,7 @@
 PRODUCT_VERSION_MAJOR = 8.0
 PRODUCT_VERSION_MINOR = ALPHA
 PRODUCT_VERSION_MAINTENANCE =
-NinjaOS_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+NinjaOS_POSTFIX := -$(shell date +"%Y%m%d")
 ifdef NinjaOS_BUILD_EXTRA
     NinjaOS_POSTFIX := -$(NinjaOS_BUILD_EXTRA)
 endif
