@@ -46,9 +46,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle
 
 # Themes
-PRODUCT_PACKAGES += \
-    PixelTheme \
-    Stock
+$(call inherit-product, vendor/ninja/google/themes/Themes.mk)
 
 # Extra tools
 PRODUCT_PACKAGES += \
