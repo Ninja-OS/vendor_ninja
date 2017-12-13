@@ -58,9 +58,7 @@ PRODUCT_COPY_FILES += \
     vendor/ninja/prebuilt/common/etc/privapp-permissions-ninja.xml:system/etc/permissions/privapp-permissions-ninja.xml
 
 # Themes
-PRODUCT_PACKAGES += \
-    PixelTheme \
-    Stock
+$(call inherit-product, vendor/ninja/google/themes/Themes.mk)
 
 # Extra tools
 PRODUCT_PACKAGES += \
