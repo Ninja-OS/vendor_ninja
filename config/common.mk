@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemeInterfacer \
     Turbo \
-    FirefoxFocus \
+    Chromium \
     Phonograph \
     WallpaperPickerGoogle
 
