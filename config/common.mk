@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     Stk \
-    ThemeInterfacer \
     Turbo \
     FirefoxFocus \
     Phonograph \
