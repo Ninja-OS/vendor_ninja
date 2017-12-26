@@ -1,5 +1,4 @@
-# Copyright (C) 2016 The Pure Nexus Project
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2017 Ninja-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#JDCTeam versioning
-ifndef JDC_BUILD_TYPE
-    JDC_BUILD_TYPE := ALPHA
+#Ninja Versioning
+# Versioning System
+# ninja first version.
+PRODUCT_VERSION_MAJOR = 8.1
+PRODUCT_VERSION_MINOR = ALPHA
+PRODUCT_VERSION_MAINTENANCE =
+NINJA_POSTFIX := -$(shell date +"%Y%m%d")
+ifdef NINJA_BUILD_EXTRA
+    NINJA_POSTFIX := -$(NINJA_BUILD_EXTRA)
 endif
 
-JDC_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(JDC_BUILD_TYPE)
+ifndef NINJA_BUILD_TYPE
+    NINJA_BUILD_TYPE := UNOFFICIAL
+endif
+
+# Set all versions
+NINJA_VERSION := NinjaOS-$(NINJA_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)$(NINJA_BUILD_TYPE)$(NINJA_POSTFIX)
+NINJA_MOD_VERSION := NinjaOS-$(NINJA_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(PRODUCT_VERSION_MAINTENANCE)$(NINJA_BUILD_TYPE)$(NINJA_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.jdc.version=$(JDC_VERSION)
+    BUILD_DISPLAY_ID=$(BUILD_ID) \
+    ninja.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.ninja.version=$(NINJA_VERSION) \
+    ro.modversion=$(NINJA_MOD_VERSION) \
+ro.ninja.buildtype=$(NINJA_BUILD_TYPE)
