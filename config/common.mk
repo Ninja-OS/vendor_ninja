@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2017 NINJA
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 
 include vendor/ninja/config/version.mk
 
-PRODUCT_BRAND ?= JDCTeam
+PRODUCT_BRAND ?= NINJA
 
 # Use signing keys for user builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
@@ -42,14 +42,16 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Custom NINJA packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    Jelly \
     LatinIME \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
     OTAUpdates \
     Stk \
-    Turbo
+    Turbo \
+    ViaBrowser \
+    Phonograph \
+    WallpaperPickerGoogle
 
 # Default permissions
 PRODUCT_COPY_FILES += \
