@@ -1,4 +1,5 @@
 # Copyright (C) 2015 The JDCTeam
+# Copyright (C) 2017 NINJAOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,7 +49,7 @@ include $(BUILD_PREBUILT)
 include $(CLEAR_VARS)
 LOCAL_MODULE := Turbo
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := Turbo/Turbo.apk
+LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
