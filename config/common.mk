@@ -13,15 +13,15 @@
 # limitations under the License.
 
 # include definitions for SDCLANG
-# include vendor/aosp/sdclang/sdclang.mk
+# include vendor/ninja/sdclang/sdclang.mk
 
-include vendor/aosp/config/version.mk
+include vendor/ninja/config/version.mk
 
 PRODUCT_BRAND ?= JDCTeam
 
 # Use signing keys for user builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/aosp/.keys/release
+    PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/ninja/.keys/release
 endif
 
 # Backup Tool
@@ -86,20 +86,20 @@ PRODUCT_PACKAGES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/ninja/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # For keyboard gesture typing
-ifneq ($(filter jdc_jflte jdc_onyx,$(TARGET_PRODUCT)),)
+ifneq ($(filter ninja_jflte ninja_onyx,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
+    vendor/ninja/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
+    vendor/ninja/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
 endif
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
+    vendor/ninja/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # LatinIME gesture typing
 ifeq ($(TARGET_ARCH),arm64)
@@ -114,7 +114,7 @@ endif
 
 # PHENOM-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
+    vendor/ninja/prebuilt/common/etc/init.local.rc:root/init.ninja.rc
 
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
@@ -123,7 +123,7 @@ PRODUCT_COPY_FILES +=  \
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/ninja/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -141,7 +141,7 @@ PRODUCT_PACKAGES += \
 
 # Changelog
 PRODUCT_COPY_FILES += \
-    vendor/aosp/Changelog.md:system/etc/Changelog.md
+    vendor/ninja/Changelog.md:system/etc/Changelog.md
 
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \
@@ -158,7 +158,7 @@ USE_DEX2OAT_DEBUG ?= false
 # Magisk
 ifeq ($(WITH_ROOT),true)
  PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
+    vendor/ninja/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 else
 $(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
 endif
