@@ -149,8 +149,8 @@ PRODUCT_PACKAGES += \
     media_codecs_ffmpeg.xml
 
 # Changelog
-PRODUCT_COPY_FILES += \
-    vendor/ninja/Changelog.md:system/etc/Changelog.md
+#PRODUCT_COPY_FILES += \
+#    vendor/ninja/Changelog.md:system/etc/Changelog.md
 
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \
