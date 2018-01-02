@@ -39,6 +39,13 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/ninja/overlay/common \
     vendor/ninja/overlay/dictionaries
 
+# Backup tool
+PRODUCT_COPY_FILES += \
+    vendor/ninja/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/ninja/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/ninja/prebuilt/common/bin/50-ninja.sh:system/addon.d/50-ninja.sh \
+    vendor/ninja/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
+
 # Custom NINJA packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
