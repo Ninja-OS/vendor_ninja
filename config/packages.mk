@@ -1,3 +1,8 @@
+# Packages
+PRODUCT_PACKAGES += \
+    SystemDarkTheme \
+    Turbo
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
