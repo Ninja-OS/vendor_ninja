@@ -5,6 +5,12 @@ PRODUCT_PACKAGES += \
     SystemDarkTheme \
     Turbo
 
+# Overlays
+PRODUCT_PACKAGES += \
+    GBoardDark \
+    SettingsDark \
+    SystemDark
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
