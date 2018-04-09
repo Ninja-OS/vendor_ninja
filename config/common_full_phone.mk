@@ -1,10 +1,10 @@
 # Inherit common stuff
-$(call inherit-product, vendor/gzosp/config/common.mk)
-$(call inherit-product, vendor/gzosp/config/common_apn.mk)
+$(call inherit-product, vendor/ninja/config/common.mk)
+$(call inherit-product, vendor/ninja/config/common_apn.mk)
 
-# Telephony 
+# Telephony
 PRODUCT_PACKAGES += \
-    Stk 
+    Stk
 
 # SMS
 PRODUCT_PACKAGES += \
