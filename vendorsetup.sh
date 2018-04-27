@@ -1,0 +1,3 @@
+#Ninja Devices
+add_lunch_combo ninja_athene-userdebug
+add_lunch_combo ninja_jalebi-userdebug
